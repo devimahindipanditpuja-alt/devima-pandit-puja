@@ -1,12 +1,14 @@
-import { MetadataRoute } from "next";
+import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = 'https://devimahindipanditpuja.com';
+  
   return [
     {
-      url: "https://devimahindipanditpuja.com",
+      url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
+      changeFrequency: 'daily',
+      priority: 1.0,
     },
   ];
 }
