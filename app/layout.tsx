@@ -11,12 +11,19 @@ export const metadata: Metadata = {
     template: "%s | Devi Ma Hindi Pandit Puja Bengaluru"
   },
   description:
-    "Book experienced North Indian Hindi Pandit Pradeep Shastri in Bengaluru (20+ Yrs Exp, Balanand Ashram Deoghar) for Griha Pravesh, Satyanarayan Puja, Rudrabhishek, Vivah Sanskar & all Vedic rituals.",
+    "Book experienced North Indian Hindi Pandit Pradeep Shastri in Bengaluru (20+ Yrs Exp, Balanand Ashram Deoghar) for Griha Pravesh, Satyanarayan Puja, Rudrabhishek, Vivah Sanskar & all Vedic rituals across Whitefield, Marathahalli, HSR Layout, Electronic City, Sarjapur, and all Bengaluru areas.",
   keywords: [
     "Hindi Pandit in Bangalore",
     "Best Pandit in Bengaluru",
     "North Indian Pandit in Bangalore",
     "Pandit for Puja in Bengaluru",
+    "Pandit in Whitefield",
+    "Pandit in Marathahalli",
+    "Pandit in HSR Layout",
+    "Pandit in Electronic City",
+    "Pandit in Sarjapur",
+    "Pandit in Koramangala",
+    "Pandit in Indiranagar",
     "Griha Pravesh Puja Pandit Bangalore",
     "Satyanarayan Puja Pandit Bengaluru",
     "Rudrabhishek Pandit in Bangalore",
@@ -27,7 +34,7 @@ export const metadata: Metadata = {
   creator: "Prince Pandey",
   publisher: "Devi Ma Hindi Pandit Puja",
   icons: {
-    icon: "/favicon.ico", // Yahan aapka custom favicon set ho gaya
+    icon: "/favicon.ico",
   },
   alternates: {
     canonical: "https://devimahindipanditpuja.com",
@@ -39,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "Devi Ma Hindi Pandit Puja",
     title: "Devi Ma Hindi Pandit Puja | Best North Indian Pandit in Bengaluru",
     description:
-      "Authentic Vedic rituals & pujas across Bengaluru by Pandit Pradeep Shastri (20+ years experience). Book Griha Pravesh, Satyanarayan Katha, Rudrabhishek, and 36 sacred rituals.",
+      "Authentic Vedic rituals & pujas across all Bengaluru localities (Whitefield, Sarjapur, HSR, Electronic City, etc.) by Pandit Pradeep Shastri (20+ years experience).",
     images: [
       {
         url: "/logo-emblem/Devotional Durga Pandit Puja Emblem.png",
@@ -88,7 +95,23 @@ export default function RootLayout({
       addressRegion: "Karnataka",
       addressCountry: "IN",
     },
-    areaServed: "Bengaluru",
+    areaServed: [
+      "Whitefield",
+      "Marathahalli",
+      "HSR Layout",
+      "Electronic City",
+      "JP Nagar",
+      "Indiranagar",
+      "Koramangala",
+      "BTM Layout",
+      "Bannerghatta",
+      "Bellandur",
+      "Sarjapur",
+      "Yelahanka",
+      "Hebbal",
+      "MG Road",
+      "Bengaluru"
+    ],
     founder: {
       "@type": "Person",
       name: "Pandit Pradeep Shastri",
