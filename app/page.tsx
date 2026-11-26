@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { 
   Phone, 
   MessageCircle, 
@@ -14,6 +15,7 @@ import {
   ChevronUp
 } from "lucide-react";
 import { pujaServices, PujaItem } from "../data/pujas";
+import { bengaluruLocations } from "../data/locations";
 
 // Clean SVG Brand Icons
 const InstagramIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
@@ -197,7 +199,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* PANDIT PROFILE SECTION (FIXED PHOTO WITHOUT CROP / OBJECT-CONTAIN) */}
+        {/* PANDIT PROFILE SECTION */}
         <section id="profile" className="relative z-10 py-16 px-4 max-w-6xl mx-auto">
           <div className="bg-[#2b0f04]/95 border border-orange-500/40 rounded-3xl p-8 md:p-12 shadow-2xl backdrop-blur-md">
             <div className="grid md:grid-cols-3 gap-8 items-center">
@@ -273,7 +275,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* SERVICE LOCATIONS SECTION (15 BENGALURU AREAS FOR LOCAL SEO) */}
+        {/* SERVICE LOCATIONS SECTION (CONNECTED WITH DYNAMIC LINKS) */}
         <section id="locations" className="relative z-10 py-16 px-4 bg-gradient-to-b from-[#240c02]/80 to-[#1a0800] border-y border-orange-500/25">
           <div className="max-w-6xl mx-auto text-center">
             <span className="text-amber-400 font-semibold tracking-wider uppercase text-sm bg-orange-500/15 px-4 py-1 rounded-full border border-orange-400/30">
@@ -283,36 +285,21 @@ export default function Home() {
               Hindi Pandit Services in All Major Areas of Bengaluru
             </h2>
             <p className="text-amber-100/80 max-w-2xl mx-auto mb-10 text-sm md:text-base">
-              Book experienced North Indian Vedic Pandit Ji for Griha Pravesh, Satyanarayan Puja, Rudrabhishek, Havans, and all Hindu rituals at your doorstep across all localities in Bengaluru.
+              Click on your area below to view local puja services, samagri details, and book North Indian Vedic Pandit Ji at your doorstep across Bengaluru.
             </p>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4">
-              {[
-                "Whitefield",
-                "Marathahalli",
-                "HSR Layout",
-                "Electronic City",
-                "JP Nagar",
-                "Indiranagar",
-                "Koramangala",
-                "BTM Layout",
-                "Bannerghatta",
-                "Bellandur",
-                "Sarjapur",
-                "Yelahanka",
-                "Hebbal",
-                "MG Road",
-                "All Bangalore",
-              ].map((area) => (
-                <div
-                  key={area}
-                  className="bg-[#2b0f04] hover:bg-orange-950/70 border border-orange-500/35 rounded-xl p-3.5 transition-all duration-300 flex items-center justify-center gap-2 shadow-md group"
+              {bengaluruLocations.map((loc) => (
+                <Link
+                  key={loc.slug}
+                  href={`/${loc.slug}`}
+                  className="bg-[#2b0f04] hover:bg-orange-900/60 border border-orange-500/35 hover:border-amber-400 rounded-xl p-3.5 transition-all duration-300 flex items-center justify-center gap-2 shadow-md group"
                 >
                   <span className="text-orange-400 text-base group-hover:scale-110 transition">📍</span>
                   <span className="text-amber-50 font-medium text-xs md:text-sm">
-                    Pandit in {area}
+                    Pandit in {loc.name}
                   </span>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -583,7 +570,7 @@ export default function Home() {
         </section>
       </main>
 
-      {/* FOOTER WITHOUT DEVELOPER NUMBER (CLIENT REQUIREMENT) */}
+      {/* FOOTER */}
       <footer className="relative z-10 bg-[#120400] border-t border-orange-500/30 py-10 px-4 text-center">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-amber-200/80">
           <div className="text-center md:text-left">
