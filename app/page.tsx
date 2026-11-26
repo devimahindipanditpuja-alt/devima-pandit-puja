@@ -168,7 +168,7 @@ export default function Home() {
               </p>
               <div className="flex flex-wrap justify-center md:justify-start gap-4">
                 <a href="#pujas" className="bg-gradient-to-r from-amber-500 via-orange-500 to-yellow-500 hover:opacity-90 text-black font-extrabold px-8 py-3.5 rounded-xl shadow-lg transition transform hover:-translate-y-0.5">
-                  Explore All 36 Pujas
+                  Explore All Pujas
                 </a>
                 <a href="#booking-form" className="bg-[#381203] hover:bg-[#4d1904] text-amber-300 border border-orange-400/50 font-bold px-8 py-3.5 rounded-xl shadow-lg transition transform hover:-translate-y-0.5">
                   Book Puja Online
@@ -269,6 +269,51 @@ export default function Home() {
                   </a>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SERVICE LOCATIONS SECTION (15 BENGALURU AREAS FOR LOCAL SEO) */}
+        <section id="locations" className="relative z-10 py-16 px-4 bg-gradient-to-b from-[#240c02]/80 to-[#1a0800] border-y border-orange-500/25">
+          <div className="max-w-6xl mx-auto text-center">
+            <span className="text-amber-400 font-semibold tracking-wider uppercase text-sm bg-orange-500/15 px-4 py-1 rounded-full border border-orange-400/30">
+              📍 Service Coverage Across Bengaluru
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mt-4 mb-3">
+              Hindi Pandit Services in All Major Areas of Bengaluru
+            </h2>
+            <p className="text-amber-100/80 max-w-2xl mx-auto mb-10 text-sm md:text-base">
+              Book experienced North Indian Vedic Pandit Ji for Griha Pravesh, Satyanarayan Puja, Rudrabhishek, Havans, and all Hindu rituals at your doorstep across all localities in Bengaluru.
+            </p>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4">
+              {[
+                "Whitefield",
+                "Marathahalli",
+                "HSR Layout",
+                "Electronic City",
+                "JP Nagar",
+                "Indiranagar",
+                "Koramangala",
+                "BTM Layout",
+                "Bannerghatta",
+                "Bellandur",
+                "Sarjapur",
+                "Yelahanka",
+                "Hebbal",
+                "MG Road",
+                "All Bangalore",
+              ].map((area) => (
+                <div
+                  key={area}
+                  className="bg-[#2b0f04] hover:bg-orange-950/70 border border-orange-500/35 rounded-xl p-3.5 transition-all duration-300 flex items-center justify-center gap-2 shadow-md group"
+                >
+                  <span className="text-orange-400 text-base group-hover:scale-110 transition">📍</span>
+                  <span className="text-amber-50 font-medium text-xs md:text-sm">
+                    Pandit in {area}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -468,7 +513,7 @@ export default function Home() {
                     id="puja-location"
                     type="text" 
                     required 
-                    placeholder="e.g. Whitefield, Marathahalli, HSR Layout"
+                    placeholder="e.g. Whitefield, Sarjapur, Electronic City"
                     value={formData.location}
                     onChange={(e) => setFormData({...formData, location: e.target.value})}
                     className="w-full bg-[#1a0800] border border-orange-500/30 rounded-xl px-4 py-3 text-white text-sm focus:border-orange-400 outline-none"
