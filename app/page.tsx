@@ -197,19 +197,19 @@ export default function Home() {
           </div>
         </section>
 
-        {/* PANDIT PROFILE SECTION */}
+        {/* PANDIT PROFILE SECTION (FIXED PHOTO WITHOUT CROP / OBJECT-CONTAIN) */}
         <section id="profile" className="relative z-10 py-16 px-4 max-w-6xl mx-auto">
           <div className="bg-[#2b0f04]/95 border border-orange-500/40 rounded-3xl p-8 md:p-12 shadow-2xl backdrop-blur-md">
             <div className="grid md:grid-cols-3 gap-8 items-center">
               <div className="text-center md:text-left">
-                <div className="w-48 h-48 mx-auto md:mx-0 rounded-2xl bg-gradient-to-tr from-amber-500 via-orange-500 to-yellow-300 p-1 shadow-xl overflow-hidden">
+                <div className="w-48 h-60 mx-auto md:mx-0 rounded-2xl bg-gradient-to-tr from-amber-500 via-orange-500 to-yellow-300 p-1 shadow-xl overflow-hidden flex items-center justify-center bg-[#1a0800]">
                   <img 
                     src="/pandit/pandit.png" 
                     alt="Pandit Pradeep Shastri - Hindi Pandit in Bengaluru" 
                     width={192}
-                    height={192}
+                    height={240}
                     fetchPriority="high"
-                    className="w-full h-full object-cover rounded-xl bg-[#1a0800]"
+                    className="w-full h-full object-contain rounded-xl"
                   />
                 </div>
                 <div className="mt-4 inline-flex items-center bg-orange-500/20 text-amber-300 border border-orange-500/40 px-3.5 py-1.5 rounded-lg text-xs font-bold">
@@ -583,7 +583,7 @@ export default function Home() {
         </section>
       </main>
 
-      {/* FOOTER WITH SOCIAL LINKS & DEVELOPER CREDIT */}
+      {/* FOOTER WITHOUT DEVELOPER NUMBER (CLIENT REQUIREMENT) */}
       <footer className="relative z-10 bg-[#120400] border-t border-orange-500/30 py-10 px-4 text-center">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-amber-200/80">
           <div className="text-center md:text-left">
@@ -603,9 +603,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="bg-[#2b0f04] border border-orange-500/40 px-5 py-3 rounded-2xl text-amber-200 font-medium shadow-lg">
-            Designed & Developed by <strong className="text-white">Prince Pandey</strong> 
-            <a href="tel:7667984349" className="ml-2 text-amber-400 underline font-bold">+91 7667984349</a>
+          <div className="bg-[#2b0f04] border border-orange-500/40 px-6 py-3 rounded-2xl text-amber-200 font-medium shadow-lg">
+            <p className="text-white font-bold">Devi Ma Hindi Pandit Puja Services</p>
+            <p className="text-xs text-orange-300 mt-0.5">Authentic Vedic Rituals in Bengaluru</p>
           </div>
         </div>
       </footer>
