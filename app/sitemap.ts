@@ -2,6 +2,8 @@ import { MetadataRoute } from 'next';
 import { bengaluruLocations } from '../data/locations';
 import { pujaServices } from '../data/pujas';
 
+export const dynamic = 'force-static';
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://devimahindipanditpuja.com';
   
